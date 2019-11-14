@@ -1,0 +1,367 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300&display=swap");
+.App {
+  font-family: "Roboto", sans-serif;
+  width: 100%;
+  height: 100%;
+}
+
+@viewport {
+  width: device-width;
+  zoom: 1;
+}
+
+@-ms-viewport {
+  width: device-width;
+}
+
+/* generics */
+a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  border-bottom: 2px solid pink;
+  transition: all 0.5s;
+}
+a:hover {
+  border-bottom: 2px solid rgb(255, 100, 126);
+}
+.main {
+  margin-right: 15%;
+  margin-left: 15%;
+  margin-top: 80px;
+  padding-bottom: 90px;
+}
+.row {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.bi {
+  width: 50%;
+  margin-left: 0%;
+  margin-right: 0%;
+  display: flex;
+  flex-direction: column;
+
+  text-align: left;
+}
+.padL {
+  padding-left: 2%;
+}
+.rowND {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.tri {
+  width: 29%;
+  margin-left: 2%;
+  margin-right: 2%;
+  display: flex;
+  flex-direction: column;
+}
+.quad {
+  width: 25%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.faceImg {
+  width: 70%;
+  padding: 0px 15%;
+}
+.uchiImg {
+  width: 80%;
+
+  margin-left: 20%;
+}
+.subtitleImg {
+  width: 300px;
+  margin-top: -55px;
+  margin-bottom: 25px;
+}
+.centerVert {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+.center {
+  text-align: center;
+}
+
+.alignRight {
+  text-align: right;
+}
+.icon {
+  width: 40px;
+  padding: 3px;
+  transition: transform 0.5s;
+}
+.icon:hover {
+  transform: scale(1.2);
+}
+
+.bottomBorder {
+  margin-top: 32px;
+  border-bottom: 1px solid #000000;
+}
+.bottomBordered {
+  margin-top: 32px;
+}
+
+.titleP {
+  font-size: 19px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+.bikeImg {
+  width: 100%;
+  margin-bottom: 10px;
+}
+/* generics */
+/* overview */
+.resumeImg {
+  position: absolute;
+  width: 100%;
+  margin-left: -100%;
+  pointer-events: all;
+  opacity: 0;
+  transition: opacity 0.5s;
+  z-index: 7;
+}
+.resumeImgAlt {
+  position: relative;
+  pointer-events: none;
+  width: 100%;
+  transition: opacity 0.5s;
+  z-index: 1;
+}
+.resumeImg:hover {
+  opacity: 1;
+}
+
+.overRight {
+  width: 78%;
+  margin-left: 2%;
+  margin-right: 0%;
+  align-content: center;
+}
+.educationPad {
+}
+.overLeft {
+  width: 20%;
+  margin-left: 0%;
+  margin-right: o%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.lilPad {
+  padding-top: 30px;
+}
+.bottomPad {
+  padding-bottom: 20px;
+}
+/* overview */
+/* three render */
+.three {
+  height: 100vh;
+  width: 100%;
+}
+canvas {
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  z-index: -10;
+}
+/* three render */
+
+/* landing page */
+.titleImg {
+  width: 400px;
+  position: absolute;
+  margin-top: -60vh;
+  left: 50%;
+  margin-left: -202px;
+}
+.downArrow {
+  width: 20px;
+  position: absolute;
+  margin-top: -5vh;
+  left: 50%;
+  margin-left: -15px;
+  transition: opacity 0.5s;
+}
+.downArrow:hover {
+  opacity: 0.7;
+}
+.tooltip {
+  position: absolute;
+  margin-top: -5vh;
+  margin-left: 17px;
+  transition: opacity 1s;
+}
+
+.whatsThisImg {
+  width: 20px;
+}
+
+.tooltip .tooltiptext {
+  opacity: 0;
+  margin-top: -49px;
+  margin-left: 10px;
+  width: 180px;
+  background-color: white;
+  color: black;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+
+  position: absolute;
+  z-index: 1;
+  transition: opacity 1s;
+}
+
+.tooltip:hover {
+  opacity: 0.7;
+}
+.tooltip:hover .tooltiptext {
+  opacity: 1;
+}
+.tooltip .tooltiptext::after {
+  content: " ";
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  margin-top: 20px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent white transparent transparent;
+}
+/* landing page */
+
+/* dev projects */
+.toolsDiv {
+  padding-bottom: 20px;
+  width: 100%;
+}
+ul {
+  margin: 0px;
+  padding: 0px;
+}
+.toolsUl {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  width: 100%;
+
+  border-left: 1px #000 solid;
+}
+li {
+  list-style: none;
+}
+li .toolsLi {
+  color: #000;
+  /* margin: 0px 50%; */
+  text-decoration: none;
+}
+.outerDiv {
+  width: 100%;
+  border-right: 1px #000 solid;
+  /* left: 50%;
+  margin-left: -100px; */
+}
+.liDiv {
+  position: relative;
+}
+.toolIco {
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+  transition: all 0.5s ease;
+  z-index: 5;
+  pointer-events: none;
+  position: relative;
+}
+.grey {
+  width: 80%;
+  transition: all 0.5s ease;
+  filter: grayscale(90%);
+  -webkit-filter: grayscale(90%); /* Safari 6.0 - 9.0 */
+  z-index: 1;
+  pointer-events: all;
+  position: absolute;
+  margin-left: -90%;
+}
+.grey:hover {
+  -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(0%);
+}
+.toolCompDiv {
+  display: flex;
+  flex-direction: row;
+  padding-top: 20px;
+}
+.toolCompRight {
+  width: 57%;
+  margin: 0px 2%;
+}
+.toolCompLeft {
+  width: 25%;
+  margin: 0px 2%;
+}
+.toolCompImg {
+  width: 100%;
+}
+.toolComponentDiv {
+  height: 250px;
+}
+/* dev projects */
+
+/* footer */
+footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  background-image: url("img/foot.PNG");
+  background-attachment: fixed;
+
+  background-position: bottom;
+  color: #ffffff;
+}
+
+/* footer */
+@media screen and (max-width: 600px) {
+  .downArrow,
+  .tooltip {
+    display: none;
+  }
+  .row {
+    flex-direction: column;
+  }
+  .alignRight {
+    text-align: center;
+  }
+  .overLeft,
+  .overRight,
+  .tri {
+    width: 100%;
+    margin: 0px;
+  }
+}
+
+p {
+  margin: 0px;
+  padding: 0px;
+}
+
+h4 {
+  margin: 0px;
+  padding: 0px;
+}
