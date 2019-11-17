@@ -3,7 +3,7 @@
   font-family: "Roboto", sans-serif;
   width: 100%;
   height: 100%;
-  overflow: visible
+  overflow: visible;
 }
 
 @viewport {
@@ -412,7 +412,7 @@ footer {
     margin-left: 25%;
     margin-right: 25%;
   }
-  .downArrow,
+
   .tooltip {
     display: none;
   }
