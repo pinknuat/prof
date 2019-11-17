@@ -402,7 +402,8 @@ footer {
     margin-left: 25%;
     margin-right: 25%;
   }
-  .uchiImg {
+  .uchiImg,
+  .downArrow {
     display: none;
   }
 
