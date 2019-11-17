@@ -351,8 +351,8 @@ class App extends Component {
 
             <div className="row">
               <div className="tri ">
+                <p className="titleP">Fun Facts:</p>
                 <p className="regularText ">
-                  <p className="titleP">Fun Facts:</p>
                   - Bears can run up to 37 mph
                   <br />
                   - I was born in Alaska.
@@ -381,8 +381,8 @@ class App extends Component {
                 </p>
               </div>
               <div className="tri centerVert">
+                <p className="titleP">Contact Me:</p>
                 <p className="regularText ">
-                  <p className="titleP">Contact Me:</p>
                   Email: simonm@uchicago.edu <br />
                   Discord: naut#1973
                 </p>
