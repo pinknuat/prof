@@ -306,10 +306,9 @@ class SceneThree extends Component {
 
     if (isMobile) {
       console.log("mobile");
-      window.addEventListener("touchmove", this.onInputMove, {
-        passive: false
-      });
-      window.input.touch.preventDefault = false;
+      // window.addEventListener("touchmove", this.onInputMove, {
+      //   passive: false
+      // });
     } else {
       window.addEventListener("mousemove", this.onInputMove);
     }
