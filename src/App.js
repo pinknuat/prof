@@ -206,7 +206,7 @@ class App extends Component {
                       <div className="alignRight">
                         <i>Computer Science/Astrophysics</i>
                         <p>Class of 2023</p>
-                        <p>GPA: 4.0</p>
+                        
                       </div>
                     </div>
                     <div className="overLeft centerVert">
