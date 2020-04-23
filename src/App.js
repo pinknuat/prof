@@ -230,6 +230,7 @@ class App extends Component {
               </div>
               <div className="overRight">
                 <p className="titleP">Awards</p>
+                <p>- Google Cloud Award (CommonHacks 2020)</p>
                 <p>- Facebook Community Award (HackHarvard 2019)</p>
                 <p>- Hacker's Spirit Award (HackHarvard 2019)</p>
                 <p>- Star of Life Nominee (AMR 2019)</p>
@@ -241,8 +242,8 @@ class App extends Component {
                 <br />
                 <p className="titleP">Development Proficiencies</p>
                 <p>
-                  Languages: Java, JavaScript, Python, PHP, Objective C, C#,
-                  HTML/CSS, Git, Racket
+                  Languages: Java, JavaScript, Python, PHP, Go, Swift, C#, 
+                  HTML/CSS, Git, R, Racket
                 </p>
                 <p>
                   Tools: AWS (Databases(MongoDB), EC2,S3, Gateway, Lambda,
@@ -251,9 +252,9 @@ class App extends Component {
                   Maps API
                 </p>
                 <p>
-                  Libraries/Frameworks: Node.js, React.js, Django, Flask, Mocha,
+                  Libraries/Frameworks: Node.js, React.js, React Native, Django, Flask, Mocha,
                   TensorFlow, Android SDK, Open CV, Spring Boot, Three.js,
-                  Numpy, MatPlotLib
+                  Numpy, Pandas, MatPlotLib
                 </p>
               </div>
             </div>
