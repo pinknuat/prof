@@ -170,7 +170,7 @@ class Projects extends Component {
               <p>
                 ORION is a 501c3 I founded in High School with the initial
                 purpose to fund my robotics team. With ORION I have been able
-                conduct robotics camps in the Dominican Republic and GHana, help
+                conduct robotics camps in the Dominican Republic and Ghana, help
                 open a Makerspace, and support various robotics teams. ORION was
                 dissolved October 2019. For a full review of activity view our
                 dissolution report.
