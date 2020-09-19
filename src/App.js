@@ -369,7 +369,7 @@ class App extends Component {
               </div>
               <div className="tri ">
                 <p className="titleP">
-                  My super cool and epic bike trek <span role="img">😎</span>:
+                  My super cool and epic bike trek <span role="img" aria-label="sunglasses emoji">😎</span>:
                 </p>
                 <img src={bike} alt="bike" className="bikeImg" />
                 <p className="regularText">
