@@ -58,6 +58,14 @@ import devProjects from "./img/devProjects.png";
 import projects from "./img/projects.png";
 import aboutMe from "./img/aboutMe.png";
 import "./App.css";
+//<div className="tooltip">
+//           <img src={whatsThis} alt="what" className="whatsThisImg"></img>
+//         <span className="tooltiptext">
+//           This landing page was built with three.js/webgl and react
+//         </span>
+//</div>
+
+          
 const devImages = [
   icoAct,
   icoBlog,
@@ -108,13 +116,7 @@ class App extends Component {
           </div>
 
           <img src={titleImg} alt="title" className="titleImg"></img>
-          <div className="tooltip">
-            <img src={whatsThis} alt="what" className="whatsThisImg"></img>
-
-            <span className="tooltiptext">
-              This landing page was built with three.js/webgl and react
-            </span>
-          </div>
+          
           <Link
             to="intro"
             style={{ width: "100%", zIndex: "20" }}
@@ -172,12 +174,17 @@ class App extends Component {
 
                 <p>
                   Research Assistant{" "}
-                  <i>at The Harris School of Public Policy (2019)</i>
+                  <i>at The Harris School of Public Policy (2019-present)</i>
                 </p>
                 <p className="smallP">
-                  Webscraping and Data Science with Python.
+                 Creating scores of scripts for dynamic web scraping and data analysis. 80% of workflow is done through the supercomputer on campus. Created the project's website.
                 </p>
-
+                <p>
+                  Intern<i> at Spott (2019-present)</i>
+                </p>
+                <p className="smallP">
+                  A shadowing program where I learned more about the startup envioronment. Created website and added a few backend features.
+                </p>
                 <p>
                   EMT <i>at American Medical Response (2018-2019)</i>
                 </p>
@@ -189,13 +196,7 @@ class App extends Component {
                   Creating web apps, webscrapers, and simple scripts for various
                   friends, clients, and people off Craigslist.
                 </p>
-                <p>
-                  Intern<i> at Ampersand (2019)</i>
-                </p>
-                <p className="smallP">
-                  A short shadowing program where I learned about Django and the
-                  professional development ecosystem.
-                </p>
+                
               </div>
               <div className="bi centerVert">
                 <div>
@@ -243,10 +244,10 @@ class App extends Component {
                 <p className="titleP">Development Proficiencies</p>
                 <p>
                   Languages: Java, JavaScript, Python, PHP, Go, Swift, C#, 
-                  HTML/CSS, Git, R, Racket
+                  HTML/CSS, Git, R, Haskell
                 </p>
                 <p>
-                  Tools: AWS (Databases(MongoDB), EC2,S3, Gateway, Lambda,
+                  Tools: AWS (Databases(MongoDB, DynamoDB), EC2,S3, Gateway, Cloud Front, Lambda,
                   Cognito), Heroku, Twitter Developer Tools, Cloudiniary, Linux
                   Systems, VS code, Chrome Extension Developer Tools, Google
                   Maps API
