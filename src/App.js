@@ -6,7 +6,7 @@ import Projects from "./components/Projects";
 import SceneThree from "./components/SceneThree";
 
 import titleImg from "./img/title4.png";
-import whatsThis from "./img/whatsThis.png";
+//import whatsThis from "./img/whatsThis.png";
 import downArrow from "./img/downArrow.png";
 import face from "./img/face9.png";
 
