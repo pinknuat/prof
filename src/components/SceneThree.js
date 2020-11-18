@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import * as THREE from "three";
 import pic from "./pallete.png";
-
+import titleImg from "../img/title4.png";
 //Shaders from this tutorial
 //https://tympanus.net/codrops/2018/12/20/interactive-animated-landscape/
 var xfrag = `
@@ -440,7 +440,10 @@ class SceneThree extends Component {
             transition: "all 1s",
           }}
           className="welcomeDiv"
-        ></div>
+        >
+          <div className="welcomeInDiv"></div>
+          <img src={titleImg} alt="title" className="titleImg"></img>
+        </div>
       </div>
     );
   }

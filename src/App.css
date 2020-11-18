@@ -20,8 +20,12 @@
   height: 100%;
   z-index: 500;
   background-color: #000000;
+  pointer-events: none;
 }
-
+.welcomeInDiv {
+  width: 100%;
+  height: 100%;
+}
 /* generics */
 a {
   text-decoration: none;
@@ -224,7 +228,7 @@ canvas {
   margin-top: -60vh;
   left: 50%;
   margin-left: -202px;
-  z-index: 600;
+  /* z-index: 600; */
 }
 .downArrow {
   width: 20px;
