@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import * as THREE from "three";
 import pic from "./pallete.png";
+import titleImg from "../img/title4.png";
 var xfrag = `
 uniform float time;
 uniform vec3 color;
@@ -229,6 +230,11 @@ void main(){
 class SceneThree extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      opaci: 1,
+      visi: "visible",
+    };
+    this.removeLoader = this.removeLoader.bind(this);
     this.onInputMove = this.onInputMove.bind(this);
     this.start = this.start.bind(this);
     this.lerp = this.lerp.bind(this);
@@ -259,7 +265,7 @@ class SceneThree extends Component {
     // light.position.set(-0.75, -1, 0.5);
     // scene.add(light);
     var renderer = new THREE.WebGLRenderer({
-      antialias: true
+      antialias: true,
     });
     renderer.setPixelRatio = devicePixelRatio;
 
@@ -276,19 +282,19 @@ class SceneThree extends Component {
       pallete: { type: "t", value: null },
       speed: { type: "f", value: 1 },
       maxHeight: { type: "f", value: 20.0 },
-      color: new THREE.Color(1, 1, 1)
+      color: new THREE.Color(1, 1, 1),
     };
 
     var material = new THREE.ShaderMaterial({
       uniforms: THREE.UniformsUtils.merge([
         THREE.ShaderLib.basic.uniforms,
-        uniforms
+        uniforms,
       ]),
       vertexShader: xvert,
       fragmentShader: xfrag,
 
       wireframe: true,
-      fog: true
+      fog: true,
     });
 
     var terrain = new THREE.Mesh(geometry, material);
@@ -298,7 +304,7 @@ class SceneThree extends Component {
     scene.add(terrain);
     //////////////end scene Elements///////////////
     //////////////textures/////////////
-    new THREE.TextureLoader().load(pic, texture => {
+    new THREE.TextureLoader().load(pic, (texture) => {
       terrain.material.uniforms.pallete.value = texture;
       terrain.material.needsUpdate = true;
     });
@@ -312,6 +318,7 @@ class SceneThree extends Component {
     } else {
       window.addEventListener("mousemove", this.onInputMove);
     }
+    this.counter = 0;
 
     this.scene = scene;
     this.camera = camera;
@@ -376,9 +383,17 @@ class SceneThree extends Component {
     this.mousex = -x * 1.2;
     this.mousey = -y * 0.5;
   }
-
+  removeLoader() {
+    this.setState((state) => ({ opaci: 0, visi: "hidden" }));
+  }
   animate() {
     var windowHeight = window.innerHeight;
+    if (this.counter < 10) {
+      this.counter += 0.1;
+      if (this.counter == 9.9) {
+        removeLoader();
+      }
+    }
 
     // damping mouse for smoother interaction
     this.mousexDamped = this.lerp(this.mousexDamped, this.mousex, 0.1);
@@ -412,10 +427,21 @@ class SceneThree extends Component {
     return (
       <div
         className="three"
-        ref={mount => {
+        ref={(mount) => {
           this.mount = mount;
         }}
-      />
+      >
+        <img
+          style={{
+            opacity: this.state.opaci,
+            visibility: this.state.visi,
+            transition: "all 1s",
+          }}
+          src={titleImg}
+          alt="title"
+          className="titleImg"
+        ></img>
+      </div>
     );
   }
 }
