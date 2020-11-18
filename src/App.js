@@ -170,7 +170,17 @@ class App extends Component {
             <div className="row bottomPad">
               <div className="bi">
                 <p className="titleP">Notable Work Experience</p>
-
+                <p>
+                  Network Architecture Student Developer{" "}
+                  <i>
+                    at The University of Chicago IT department (2019-present)
+                  </i>
+                </p>
+                <p className="smallP">
+                  Developing microservices with Flask. Creating server
+                  throttling and task queuing with Redis. Scraping and cloning
+                  data on wiki.uchicago.{" "}
+                </p>
                 <p>
                   Research Assistant{" "}
                   <i>at The Harris School of Public Policy (2019-present)</i>
