@@ -65,7 +65,6 @@ import "./App.css";
 //         </span>
 //</div>
 
-          
 const devImages = [
   icoAct,
   icoBlog,
@@ -74,7 +73,7 @@ const devImages = [
   icoMand,
   icoNew,
   icoRd,
-  icoTweet
+  icoTweet,
 ];
 const devImagesAlt = [
   icoActAlt,
@@ -84,7 +83,7 @@ const devImagesAlt = [
   icoMandAlt,
   icoNewAlt,
   icoRdAlt,
-  icoTweetAlt
+  icoTweetAlt,
 ];
 const Images = [orion, first, ghana, omnitech, root, cap];
 const ImagesAlt = [orionAlt, firstAlt, ghanaAlt, omnitechAlt, rootAlt, capAlt];
@@ -94,7 +93,7 @@ class App extends Component {
     super(props);
     this.state = {
       devFilter: 0,
-      projFilter: 0
+      projFilter: 0,
     };
 
     this.handleDevFilter = this.handleDevFilter.bind(this);
@@ -116,7 +115,7 @@ class App extends Component {
           </div>
 
           <img src={titleImg} alt="title" className="titleImg"></img>
-          
+
           <Link
             to="intro"
             style={{ width: "100%", zIndex: "20" }}
@@ -177,26 +176,24 @@ class App extends Component {
                   <i>at The Harris School of Public Policy (2019-present)</i>
                 </p>
                 <p className="smallP">
-                 Creating scores of scripts for dynamic web scraping and data analysis. 80% of workflow is done through the supercomputer on campus. Created the project's website.
+                  Dynamically webscraping 2100+ books. Aggregating, managing,
+                  displaying and millions of data points (publisher, author,
+                  book award specs, etc.). Completing 80% of workflow through
+                  campus supercomputer. Creating and managing project website
+                  and logos.{" "}
                 </p>
                 <p>
                   Intern<i> at Spott (2019-present)</i>
                 </p>
                 <p className="smallP">
-                  A shadowing program where I learned more about the startup envioronment. Created website and added a few backend features.
+                  A shadowing program where I learned more about the startup
+                  environment. I created the entity's website and gained
+                  rudimentary experience with Go and Swift.
                 </p>
                 <p>
                   EMT <i>at American Medical Response (2018-2019)</i>
                 </p>
                 <p className="smallP">Patient care and report filing.</p>
-                <p>
-                  Freelance<i> at Omnified Technologies (2017 - 2019)</i>
-                </p>
-                <p className="smallP">
-                  Creating web apps, webscrapers, and simple scripts for various
-                  friends, clients, and people off Craigslist.
-                </p>
-                
               </div>
               <div className="bi centerVert">
                 <div>
@@ -206,7 +203,6 @@ class App extends Component {
                       <div className="alignRight">
                         <i>Computer Science/Astrophysics</i>
                         <p>Class of 2023</p>
-                        
                       </div>
                     </div>
                     <div className="overLeft centerVert">
@@ -243,19 +239,19 @@ class App extends Component {
                 <br />
                 <p className="titleP">Development Proficiencies</p>
                 <p>
-                  Languages: Java, JavaScript, Python, PHP, Go, Swift, C#, 
+                  Languages: Java, JavaScript, Python, PHP, Go, Swift, C#,
                   HTML/CSS, Git, R, Haskell
                 </p>
                 <p>
-                  Tools: AWS (Databases(MongoDB, DynamoDB), EC2,S3, Gateway, Cloud Front, Lambda,
-                  Cognito), Heroku, Twitter Developer Tools, Cloudiniary, Linux
-                  Systems, VS code, Chrome Extension Developer Tools, Google
-                  Maps API
+                  Tools: AWS (Databases(MongoDB, DynamoDB), EC2, S3, Gateway,
+                  Cloud Front, Lambda, Cognito), Heroku, Twitter Developer
+                  Tools, Cloudinary, Linux Systems, VS code, Chrome Extension
+                  Developer Tools, Google Maps API
                 </p>
                 <p>
-                  Libraries/Frameworks: Node.js, React.js, React Native, Django, Flask, Mocha,
-                  TensorFlow, Android SDK, Open CV, Spring Boot, Three.js,
-                  Numpy, Pandas, MatPlotLib
+                  Libraries/Frameworks: Node.js, React.js, React Native, Django,
+                  Flask, TensorFlow, Android SDK, Open CV, Spring Boot,
+                  Three.js, NumPy, Pandas, MatPlotLib
                 </p>
               </div>
             </div>
@@ -277,7 +273,7 @@ class App extends Component {
                             alt={"img"}
                             style={{
                               opacity:
-                                this.state.devFilter === index ? "1" : "0"
+                                this.state.devFilter === index ? "1" : "0",
                             }}
                             className="toolIco"
                             src={name}
@@ -286,7 +282,7 @@ class App extends Component {
                             alt={"img"}
                             style={{
                               opacity:
-                                this.state.devFilter === index ? "0" : "1"
+                                this.state.devFilter === index ? "0" : "1",
                             }}
                             className="grey"
                             src={devImagesAlt[index]}
@@ -318,7 +314,7 @@ class App extends Component {
                             alt={"img"}
                             style={{
                               opacity:
-                                this.state.projFilter === index ? "1" : "0"
+                                this.state.projFilter === index ? "1" : "0",
                             }}
                             className="toolIco"
                             src={name}
@@ -327,7 +323,7 @@ class App extends Component {
                             alt={"img"}
                             style={{
                               opacity:
-                                this.state.projFilter === index ? "0" : "1"
+                                this.state.projFilter === index ? "0" : "1",
                             }}
                             className="grey"
                             src={ImagesAlt[index]}
@@ -369,7 +365,11 @@ class App extends Component {
               </div>
               <div className="tri ">
                 <p className="titleP">
-                  My super cool and epic bike trek <span role="img" aria-label="sunglasses emoji">😎</span>:
+                  My super cool and epic bike trek{" "}
+                  <span role="img" aria-label="sunglasses emoji">
+                    😎
+                  </span>
+                  :
                 </p>
                 <img src={bike} alt="bike" className="bikeImg" />
                 <p className="regularText">

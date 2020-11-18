@@ -170,7 +170,7 @@ class Tools extends Component {
               <p>
                 A Fake News detector built at HackPrinceton. Detection done with
                 a Keras produced model hosted on the Cloud Shell and facilitated
-                by flask. NN trained with 40,000 datapoints aggregated from
+                by flask. NN trained with 40,000 data-points aggregated from
                 databases from the University of Victoria and Kaggle. Google NLP
                 API used to provide related sites.
               </p>
