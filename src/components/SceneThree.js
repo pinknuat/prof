@@ -390,9 +390,9 @@ class SceneThree extends Component {
   }
   animate() {
     var windowHeight = window.innerHeight;
-    if (this.counter < 10) {
+    if (this.counter < 5) {
       this.counter += 0.1;
-      if (this.counter > 9.9) {
+      if (this.counter > 4.9) {
         this.removeLoader();
       }
     }
