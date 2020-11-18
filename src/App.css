@@ -14,6 +14,13 @@
 @-ms-viewport {
   width: device-width;
 }
+.welcomeDiv {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 500;
+  background-color: #000000;
+}
 
 /* generics */
 a {
@@ -217,6 +224,7 @@ canvas {
   margin-top: -60vh;
   left: 50%;
   margin-left: -202px;
+  z-index: 600;
 }
 .downArrow {
   width: 20px;

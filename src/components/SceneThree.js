@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 import * as THREE from "three";
 import pic from "./pallete.png";
-import titleImg from "../img/title4.png";
+
+//Shaders from this tutorial
+//https://tympanus.net/codrops/2018/12/20/interactive-animated-landscape/
 var xfrag = `
 uniform float time;
 uniform vec3 color;
@@ -388,10 +390,10 @@ class SceneThree extends Component {
   }
   animate() {
     var windowHeight = window.innerHeight;
-    if (this.counter < 100) {
+    if (this.counter < 10) {
       this.counter += 0.1;
-      if (this.counter == 9.9) {
-        removeLoader();
+      if (this.counter > 9.9) {
+        this.removeLoader();
       }
     }
 
@@ -431,16 +433,14 @@ class SceneThree extends Component {
           this.mount = mount;
         }}
       >
-        <img
+        <div
           style={{
             opacity: this.state.opaci,
             visibility: this.state.visi,
             transition: "all 1s",
           }}
-          src={titleImg}
-          alt="title"
-          className="titleImg"
-        ></img>
+          className="welcomeDiv"
+        ></div>
       </div>
     );
   }

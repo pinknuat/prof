@@ -1,5 +1,5 @@
 createLandscape({
-  palleteImage: "img/pallete6.png"
+  palleteImage: "img/pallete6.png",
 });
 
 function createLandscape(params) {
@@ -47,7 +47,7 @@ function createLandscape(params) {
 
     renderer = new THREE.WebGLRenderer({
       canvas: container,
-      antialias: true
+      antialias: true,
     });
     renderer.setPixelRatio = devicePixelRatio;
     renderer.setSize(width, height);
@@ -63,18 +63,18 @@ function createLandscape(params) {
       pallete: { type: "t", value: null },
       speed: { type: "f", value: 1 },
       maxHeight: { type: "f", value: 10.0 },
-      color: new THREE.Color(1, 1, 1)
+      color: new THREE.Color(1, 1, 1),
     };
 
     var material = new THREE.ShaderMaterial({
       uniforms: THREE.UniformsUtils.merge([
         THREE.ShaderLib.basic.uniforms,
-        uniforms
+        uniforms,
       ]),
       vertexShader: document.getElementById("custom-vertex").textContent,
       fragmentShader: document.getElementById("custom-fragment").textContent,
       wireframe: false,
-      fog: true
+      fog: true,
     });
 
     terrain = new THREE.Mesh(geometry, material);
@@ -86,7 +86,7 @@ function createLandscape(params) {
 
   function sceneTextures() {
     // pallete
-    new THREE.TextureLoader().load(params.palleteImage, function(texture) {
+    new THREE.TextureLoader().load(params.palleteImage, function (texture) {
       terrain.material.uniforms.pallete.value = texture;
       terrain.material.needsUpdate = true;
     });
@@ -187,7 +187,7 @@ function animateTitles() {
 
   TweenMax.to(overlay, 2, {
     ease: Quad.easeOut,
-    opacity: 0
+    opacity: 0,
   });
 
   TweenMax.set(titleLetters, { opacity: 0 });
@@ -199,7 +199,7 @@ function animateTitles() {
       startAt: { rotationX: -100, z: -1000 },
       opacity: 1,
       rotationX: 0,
-      z: 0
+      z: 0,
     },
     0.1
   );
@@ -210,7 +210,7 @@ function animateTitles() {
     ease: Expo.easeOut,
     startAt: { y: 30 },
     opacity: 1,
-    y: 0
+    y: 0,
   });
 
   const glitch = (el, cycles) => {
@@ -218,7 +218,7 @@ function animateTitles() {
     TweenMax.set(el, {
       x: getRandomNumber(-20, 20),
       y: getRandomNumber(-20, 20),
-      color: ["#7aaac3", "#55276d", "#111"][cycles - 1]
+      color: ["#7aaac3", "#55276d", "#111"][cycles - 1],
     });
     setTimeout(() => {
       TweenMax.set(el, { x: 0, y: 0, color: "#fff" });
@@ -226,7 +226,7 @@ function animateTitles() {
     }, getRandomNumber(20, 100));
   };
 
-  const loop = startAt => {
+  const loop = (startAt) => {
     this.timeout = setTimeout(() => {
       const titleLettersShuffled = titleLetters.sort(
         (a, b) => 0.5 - Math.random()
